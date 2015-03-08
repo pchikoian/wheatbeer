@@ -8,14 +8,14 @@
 
   .form-group
     label 姓名
-    = f.text_field :name, class: 'form-control'
+    = f.text_field :name, class: 'form-control', placeholder: '你的姓名'
   .form-group
     label 電話
-    = f.text_field :phone, class: 'form-control'
+    = f.text_field :phone, class: 'form-control', placeholder: '你的電話'
   .form-group
     label 生日
-    = f.text_field :birth, class: 'form-control'
+    = f.text_field :birth, class: 'form-control', placeholder: 'YYYY/MM/DD'
   .form-group
     label 電子信箱
-    = f.text_field :email, class: 'form-control'
+    = f.text_field :email, class: 'form-control', placeholder: '你的Mail'
   .actions = f.submit '更新', class: "btn btn-danger"
