@@ -20,3 +20,6 @@
 *.swp
 db/schema.rb
 .DS_Store
+
+# assets
+public/assets/*

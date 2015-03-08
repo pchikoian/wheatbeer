@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
+gem "less-rails"
+gem 'twitter-bootstrap-rails'
 group :assets do
   gem 'sass-rails',   '~> 5.0'
   gem 'coffee-rails', '~> 4.1.0'
@@ -33,7 +35,6 @@ group :assets do
   # gem 'therubyracer'
 
   gem 'uglifier', '>= 1.3.0'
-  gem 'twitter-bootstrap-rails'
 end
 
 gem 'slim-rails'
