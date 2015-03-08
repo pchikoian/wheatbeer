@@ -18,3 +18,4 @@
 
 *.swp
 db/schema.rb
+.DS_Store
