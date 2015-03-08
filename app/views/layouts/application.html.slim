@@ -14,7 +14,7 @@ html lang='en'
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand href='#' Some Store
+          a.navbar-brand href='#' WheatBeer 
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
             li.active
@@ -24,4 +24,8 @@ html lang='en'
             li
               a href="contact" Contact Us
     div.container
-      h1 Test1
+      div.col-md-9
+        == yield
+      div.col-md-3
+        h2 About
+      
