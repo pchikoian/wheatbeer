@@ -6,4 +6,16 @@
         - @user.errors.full_messages.each do |message|
           li = message
 
-  .actions = f.submit
+  .form-group
+    label 姓名
+    = f.text_field :name, class: 'form-control'
+  .form-group
+    label 電話
+    = f.text_field :phone, class: 'form-control'
+  .form-group
+    label 生日
+    = f.text_field :birth, class: 'form-control'
+  .form-group
+    label 電子信箱
+    = f.text_field :email, class: 'form-control'
+  .actions = f.submit '更新', class: "btn btn-danger"
