@@ -4,6 +4,7 @@
     table.table.table-hover.table-striped
       thead
         tr
+          th.text-center #
           th.text-center 姓名
           th.text-center phone
           th.text-center mail
@@ -13,11 +14,11 @@
       tbody
         - @users.each do |user|
           tr
+            td.text-center = user.id
             td.text-center = user.name
             td.text-center = user.phone
             td.text-center = user.email
             td.text-center = user.birth
-            td.text-center = link_to 'Show', user, class: 'btn btn-info'
             td.text-center = link_to 'Edit', edit_user_path(user), class: 'btn btn-info'
             td.text-center = link_to 'Destroy', user, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-danger'
     
