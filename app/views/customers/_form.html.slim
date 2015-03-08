@@ -1,9 +1,9 @@
-= form_for @user do |f|
-  - if @user.errors.any?
+= form_for @customer do |f|
+  - if @customer.errors.any?
     #error_explanation
-      h2 = "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
+      h2 = "#{pluralize(@customer.errors.count, "error")} prohibited this customer from being saved:"
       ul
-        - @user.errors.full_messages.each do |message|
+        - @customer.errors.full_messages.each do |message|
           li = message
 
   .form-group
@@ -19,3 +19,4 @@
     label 電子信箱
     = f.text_field :email, class: 'form-control', placeholder: '你的Mail'
   .actions = f.submit '更新', class: "btn btn-danger"
+

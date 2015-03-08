@@ -1,0 +1,25 @@
+  h1 顧客名單
+
+  .table-responsive
+    table.table.table-hover.table-striped
+      thead
+        tr
+          th.text-center #
+          th.text-center 姓名
+          th.text-center phone
+          th.text-center email
+          th.text-center birth
+          th.text-center span='3' manage
+      tbody
+        - @customers.each do |customer|
+          tr
+            td.text-center = customer.id
+            td.text-center = customer.name
+            td.text-center = customer.phone
+            td.text-center = customer.email
+            td.text-center = customer.birth
+            td.text-center = link_to 'Edit', edit_customer_path(customer), class: 'btn btn-info'
+            td.text-center = link_to 'Destroy', customer, data: {:confirm => 'Are you sure?'}, :method => :delete, class: 'btn btn-danger'
+  br
+
+  = link_to "New Customer", new_customer_path, class: 'btn btn-default'
