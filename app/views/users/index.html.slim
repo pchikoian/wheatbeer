@@ -1,19 +1,27 @@
-h1 Listing users
-
-table
-  thead
-    tr
-      th
-      th
-      th
-
-  tbody
-    - @users.each do |user|
+  h1 Listing users
+  
+  table
+    thead
       tr
-        td = link_to 'Show', user
-        td = link_to 'Edit', edit_user_path(user)
-        td = link_to 'Destroy', user, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to 'New User', new_user_path
+        th 姓名
+        th phone
+        th mail
+        th birth
+        th 
+        th
+        th
+  
+    tbody
+      - @users.each do |user|
+        tr
+          td = user.name
+          td = user.phone
+          td = user.email
+          td = user.birth
+          td = link_to 'Show', user
+          td = link_to 'Edit', edit_user_path(user)
+          td = link_to 'Destroy', user, data: {:confirm => 'Are you sure?'}, :method => :delete
+  
+  br
+  
+  = link_to 'New User', new_user_path
