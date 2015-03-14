@@ -1,5 +1,5 @@
 class ApiController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  protect_from_forgery with: :null_session
   skip_before_action :catch_exceptions
   around_filter :catch_api_exceptions
 
