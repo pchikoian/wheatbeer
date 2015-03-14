@@ -1,5 +1,20 @@
+# == Route Map
+#
+#           Prefix Verb   URI Pattern                   Controller#Action
+#        customers GET    /customers(.:format)          customers#index
+#                  POST   /customers(.:format)          customers#create
+#     new_customer GET    /customers/new(.:format)      customers#new
+#    edit_customer GET    /customers/:id/edit(.:format) customers#edit
+#         customer PATCH  /customers/:id(.:format)      customers#update
+#                  PUT    /customers/:id(.:format)      customers#update
+#                  DELETE /customers/:id(.:format)      customers#destroy
+# api_v1_customers POST   /api/v1/customers(.:format)   api/v1/customers#create {:format=>:json}
+#             root GET    /                             home#index
+#
+
 Rails.application.routes.draw do
-  resources :customers, except: [:show]
+  require "#{Rails.root}/lib/helpers/routes_helper.rb"
+  draw :customers
 
   root "home#index"
 
